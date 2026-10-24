@@ -1,15 +1,5 @@
 package ru.bmstu.lab01.task_04;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 4. Все индексы элемента.
- *
- * <p>Находит все индексы элементов массива, равных заданному числу
- * {@code x}, в порядке возрастания, за один линейный проход.
- */
 public class AllIndicesFinder {
 
     /**

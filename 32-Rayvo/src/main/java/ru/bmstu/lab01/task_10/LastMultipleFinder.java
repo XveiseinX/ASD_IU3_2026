@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_10;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 10. Поиск элемента с условием.
- *
- * <p>Находит индекс последнего элемента массива, кратного заданному
- * числу {@code k}. Если такого элемента нет, возвращается {@code -1}.
- * {@code k} не может быть нулём.
- */
 public class LastMultipleFinder {
 
     /**

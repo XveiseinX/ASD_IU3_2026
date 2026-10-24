@@ -1,15 +1,5 @@
 package ru.bmstu.lab01.task_05;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 5. Сумма элементов на чётных позициях.
- *
- * <p>Вычисляет сумму элементов массива с чётными индексами
- * ({@code 0, 2, 4, ...}) за один линейный проход.
- */
 public class EvenIndexSum {
 
     /**

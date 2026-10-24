@@ -1,15 +1,5 @@
 package ru.bmstu.lab01.task_01;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 1. Максимум и минимум.
- *
- * <p>Находит минимальный и максимальный элементы целочисленного массива
- * за один линейный проход.
- */
 public class MinMaxFinder {
 
     /**

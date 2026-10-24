@@ -1,15 +1,5 @@
 package ru.bmstu.lab01.task_09;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 9. Проверка отсортированности.
- *
- * <p>Проверяет, является ли массив неубывающим
- * ({@code a[i] <= a[i+1]} для всех {@code i}), за один линейный проход.
- */
 public class SortedChecker {
 
     /**

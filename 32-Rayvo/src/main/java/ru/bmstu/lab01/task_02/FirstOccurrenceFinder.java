@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_02;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 2. Индекс первого вхождения.
- *
- * <p>Находит индекс первого элемента массива, равного заданному числу
- * {@code x}, за один линейный проход. Если такого элемента нет,
- * возвращается {@code -1}.
- */
 public class FirstOccurrenceFinder {
 
     /**

@@ -1,14 +1,5 @@
 package ru.bmstu.lab01.task_25;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 25. Сумма элементов.
- *
- * <p>Вычисляет сумму всех элементов массива за один линейный проход.
- */
 public class SumOfElements {
 
     /**

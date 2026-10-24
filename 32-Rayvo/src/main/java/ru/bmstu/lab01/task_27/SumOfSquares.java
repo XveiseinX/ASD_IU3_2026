@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_27;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 27. Сумма квадратов.
- *
- * <p>Вычисляет сумму квадратов всех элементов массива за один
- * линейный проход. Каждое слагаемое и итоговая сумма вычисляются
- * в {@code long}, чтобы избежать переполнения {@code int}.
- */
 public class SumOfSquares {
 
     /**

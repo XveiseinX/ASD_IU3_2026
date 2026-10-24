@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_07;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 7. Второй максимум.
- *
- * <p>Находит второй по величине элемент массива за один линейный проход.
- * Все элементы массива различны, поэтому второй максимум — это
- * наибольший элемент, строго меньший максимума.
- */
 public class SecondMaxFinder {
 
     /**

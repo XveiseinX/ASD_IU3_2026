@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_08;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 8. Фильтрация по знаку.
- *
- * <p>Разделяет массив на два: из положительных и из отрицательных
- * элементов, сохраняя исходный порядок. Нули не включаются ни в один
- * из массивов.
- */
 public class SignFilter {
 
     /**

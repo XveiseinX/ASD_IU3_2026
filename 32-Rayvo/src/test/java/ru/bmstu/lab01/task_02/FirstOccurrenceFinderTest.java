@@ -1,4 +1,4 @@
-package ru.bmstu.lab01.task_2;
+package ru.bmstu.lab01.task_02;
 
 import org.junit.jupiter.api.Test;
 

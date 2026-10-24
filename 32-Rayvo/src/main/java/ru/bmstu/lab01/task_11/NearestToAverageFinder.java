@@ -1,17 +1,5 @@
 package ru.bmstu.lab01.task_11;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 11. Ближайший к среднему.
- *
- * <p>Находит элемент массива, ближайший к среднему арифметическому.
- * Если таких элементов несколько, возвращается первый по индексу.
- * Среднее может быть дробным, поэтому сравнение выполняется без
- * деления — через {@code |a[i] * n - sum|}.
- */
 public class NearestToAverageFinder {
 
     /**

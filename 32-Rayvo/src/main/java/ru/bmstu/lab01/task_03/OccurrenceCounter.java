@@ -1,15 +1,5 @@
 package ru.bmstu.lab01.task_03;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 3. Подсчёт вхождений.
- *
- * <p>Считает количество элементов массива, равных заданному числу
- * {@code x}, за один линейный проход.
- */
 public class OccurrenceCounter {
 
     /**

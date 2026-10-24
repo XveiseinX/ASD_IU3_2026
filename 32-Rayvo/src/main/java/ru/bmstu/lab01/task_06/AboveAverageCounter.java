@@ -1,16 +1,5 @@
 package ru.bmstu.lab01.task_06;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
-/**
- * Задача 6. Элементы больше среднего.
- *
- * <p>Считает количество элементов массива, строго больших среднего
- * арифметического всех элементов. Гарантируется, что среднее — целое
- * число (сумма делится на {@code n}).
- */
 public class AboveAverageCounter {
 
     /**
