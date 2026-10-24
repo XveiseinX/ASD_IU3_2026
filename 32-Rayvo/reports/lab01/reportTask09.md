@@ -20,17 +20,19 @@
 **Доп. память:** `O(1)` — только счётчик цикла `i`.
 
 ### Проверки
-
-- `5 1 3 5 7 9` → YES: строго возрастающий.
-- `6 1 2 2 5 5 9` → YES: неубывающий с дубликатами.
-- `5 4 4 4 4 4` → YES: все элементы равны.
-- `1 42` → YES: один элемент.
-- `5 9 7 5 3 1` → NO: строго убывающий.
-- `5 5 3 4 6 7` → NO: нарушение в начале.
-- `5 1 2 3 4 2` → NO: нарушение в конце.
-- `5 1 2 9 4 5` → NO: нарушение в середине.
-- `5 3 1 4 2 5` → NO: произвольный неотсортированный.
-- `6 -10 -5 -5 -1 0 3` → YES: отрицательные, неубывающий.
-- `4 -3 -7 -1 -5` → NO: отрицательные, неотсортированный.
-- `2 5 5` → YES: два равных элемента.
-- `2 5 3` → NO: два элемента в неправильном порядке.
+Согласно JaCoCo покрытие тестами ветвлений составляет 100%.
+- `shouldReturnTrueForStrictlyIncreasingArray` — `5 1 3 5 7 9` → YES: строго возрастающий.
+- `shouldReturnTrueForNonDecreasingArrayWithDuplicates` — `6 1 2 2 5 5 9` → YES: неубывающий с дубликатами.
+- `shouldReturnTrueForAllEqualElements` — `5 4 4 4 4 4` → YES: все элементы равны.
+- `shouldReturnTrueForArrayWithOneElement` — `1 42` → YES: один элемент, тривиальный случай.
+- `shouldReturnFalseForStrictlyDecreasingArray` — `5 9 7 5 3 1` → NO: строго убывающий.
+- `shouldReturnFalseWhenViolationIsAtStart` — `5 5 3 4 6 7` → NO: нарушение в начале.
+- `shouldReturnFalseWhenViolationIsAtEnd` — `5 1 2 3 4 2` → NO: нарушение в конце.
+- `shouldReturnFalseWhenViolationIsInMiddle` — `5 1 2 9 4 5` → NO: нарушение в середине.
+- `shouldReturnFalseForUnsortedArray` — `5 3 1 4 2 5` → NO: произвольный неотсортированный.
+- `shouldHandleNegativeNumbersInNonDecreasingArray` — `6 -10 -5 -5 -1 0 3` → YES: отрицательные, неубывающий.
+- `shouldHandleNegativeNumbersInUnsortedArray` — `4 -3 -7 -1 -5` → NO: отрицательные, неотсортированный.
+- `shouldHandleTwoEqualElements` — `2 5 5` → YES: два равных элемента.
+- `shouldHandleTwoElementsInWrongOrder` — `2 5 3` → NO: два элемента в неправильном порядке.
+- `shouldDistinguishNonDecreasingFromStrictlyIncreasing` — `4 1 2 2 3` → YES: дубликаты допустимы (не путать со строгим возрастанием).
+- `shouldNotModifyOriginalArray` — `5 1 3 5 7 9` → исходный массив не изменяется: проверка отсутствия побочных эффектов.

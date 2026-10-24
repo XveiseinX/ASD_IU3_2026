@@ -22,14 +22,15 @@
 **Время:** `O(n)` — два прохода по n итераций, на каждой O(1).
 **Доп. память:** `O(p + q)`, где p — число положительных, q — число отрицательных; в худшем случае `O(n)`.
 ### Проверки
-
-- `7 3 -1 0 7 -4 2 -9` → positive: `3 7 2`, negative: `-1 -4 -9`: смешанный массив, нули отброшены.
-- `4 4 8 1 6` → positive: `4 8 1 6`, negative: `-`: только положительные.
-- `4 -4 -8 -1 -6` → positive: `-`, negative: `-4 -8 -1 -6`: только отрицательные.
-- `4 0 0 0 0` → positive: `-`, negative: `-`: все нули, оба массива пусты.
-- `5 0 5 0 -3 0` → positive: `5`, negative: `-3`: нули в смешанном массиве.
-- `1 25` → positive: `25`, negative: `-`: один положительный.
-- `1 -25` → positive: `-`, negative: `-25`: один отрицательный.
-- `1 0` → positive: `-`, negative: `-`: один ноль, ничего не включается.
-- `7 9 -1 3 -2 7 -3 5` → positive: `9 3 7 5`, negative: `-1 -2 -3`: порядок положительных сохранён.
-- `7 -9 1 -3 2 -7 3 -5` → positive: `1 2 3`, negative: `-9 -3 -7 -5`: порядок отрицательных сохранён.
+Согласно JaCoCo покрытие тестами ветвлений составляет 100%.
+- `shouldSplitMixedArrayPreservingOrder` — `7 3 -1 0 7 -4 2 -9` → positive: `3 7 2`, negative: `-1 -4 -9`: смешанный массив, нули отброшены.
+- `shouldReturnAllPositiveWhenNoNegative` — `4 4 8 1 6` → positive: `4 8 1 6`, negative: `-`: только положительные.
+- `shouldReturnAllNegativeWhenNoPositive` — `4 -4 -8 -1 -6` → positive: `-`, negative: `-4 -8 -1 -6`: только отрицательные.
+- `shouldDropZerosWhenAllElementsAreZero` — `4 0 0 0 0` → positive: `-`, negative: `-`: все нули, оба массива пусты.
+- `shouldDropZerosInMixedArray` — `5 0 5 0 -3 0` → positive: `5`, negative: `-3`: нули в смешанном массиве.
+- `shouldHandleSinglePositiveElement` — `1 25` → positive: `25`, negative: `-`: один положительный.
+- `shouldHandleSingleNegativeElement` — `1 -25` → positive: `-`, negative: `-25`: один отрицательный.
+- `shouldHandleSingleZeroElement` — `1 0` → positive: `-`, negative: `-`: один ноль, ничего не включается.
+- `shouldPreserveOrderOfPositives` — `7 9 -1 3 -2 7 -3 5` → positive: `9 3 7 5`, negative: `-1 -2 -3`: порядок положительных сохранён.
+- `shouldPreserveOrderOfNegatives` — `7 -9 1 -3 2 -7 3 -5` → positive: `1 2 3`, negative: `-9 -3 -7 -5`: порядок отрицательных сохранён.
+- `shouldNotModifyOriginalArray` — `7 3 -1 0 7 -4 2 -9` → исходный массив не изменяется: проверка отсутствия побочных эффектов.
