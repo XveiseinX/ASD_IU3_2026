@@ -1,4 +1,4 @@
-package ru.bmstu.lab01.task_7;
+package ru.bmstu.lab01.task_07;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -51,29 +51,5 @@ public class SecondMaxFinder {
         }
 
         return secondMax;
-    }
-
-    /**
-     * Точка входа для запуска из командной строки.
-     *
-     * <p>Ожидает строку вида: {@code n a1 a2 ... an}.
-     * Выводит второй по величине элемент.
-     *
-     * @param args аргументы командной строки (не используются)
-     */
-    public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] p = br.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(p[0]);
-
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(p[i + 1]);
-            }
-
-            System.out.println(findSecondMax(array));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

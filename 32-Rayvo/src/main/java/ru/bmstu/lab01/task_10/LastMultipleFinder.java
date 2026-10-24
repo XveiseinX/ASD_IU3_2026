@@ -42,30 +42,4 @@ public class LastMultipleFinder {
 
         return -1;
     }
-
-    /**
-     * Точка входа для запуска из командной строки.
-     *
-     * <p>Ожидает строку вида: {@code n a1 a2 ... an k}.
-     * Выводит индекс последнего элемента, кратного {@code k}, или
-     * {@code -1}, если такого нет.
-     *
-     * @param args аргументы командной строки (не используются)
-     */
-    public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] p = br.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(p[0]);
-
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(p[i + 1]);
-            }
-
-            int k = Integer.parseInt(p[n + 1]);
-            System.out.println(findLastMultiple(array, k));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -1,9 +1,8 @@
-package ru.bmstu.lab01.task_4;
+package ru.bmstu.lab01.task_04;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /**
  * Задача 4. Все индексы элемента.
@@ -48,41 +47,5 @@ public class AllIndicesFinder {
         }
 
         return indices;
-    }
-
-    /**
-     * Точка входа для запуска из командной строки.
-     *
-     * <p>Ожидает строку вида: {@code n a1 a2 ... an x}.
-     * Выводит индексы через пробел в порядке возрастания или {@code -1},
-     * если вхождений нет.
-     *
-     * @param args аргументы командной строки (не используются)
-     */
-    public static void main(String[] args) {
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] p = br.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(p[0]);
-
-            int[] array = new int[n];
-            for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(p[i + 1]);
-            }
-
-            int x = Integer.parseInt(p[n + 1]);
-            int[] indices = findAllIndices(array, x);
-
-            if (indices.length == 0) {
-                System.out.println(-1);
-            } else {
-                StringBuilder sb = new StringBuilder();
-                for (int idx : indices) {
-                    sb.append(idx).append(' ');
-                }
-                System.out.println(sb.toString().trim());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
