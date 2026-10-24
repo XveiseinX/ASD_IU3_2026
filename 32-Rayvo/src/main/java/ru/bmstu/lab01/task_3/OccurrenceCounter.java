@@ -39,23 +39,22 @@ public class OccurrenceCounter {
     /**
      * Точка входа для запуска из командной строки.
      *
-     * <p>Ожидает строку вида: {@code n x a1 a2 ... an}, где {@code n} —
-     * количество элементов, {@code x} — искомое значение. Выводит
-     * количество элементов, равных {@code x}.
+     * <p>Ожидает строку вида: {@code n a1 a2 ... an x}.
+     * Выводит количество элементов, равных {@code x}.
      *
      * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] parts = reader.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(parts[0]);
-            int x = Integer.parseInt(parts[1]);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            String[] p = br.readLine().trim().split("\\s+");
+            int n = Integer.parseInt(p[0]);
 
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(parts[i + 2]);
+                array[i] = Integer.parseInt(p[i + 1]);
             }
 
+            int x = Integer.parseInt(p[n + 1]);
             System.out.println(countOccurrences(array, x));
         } catch (IOException e) {
             e.printStackTrace();

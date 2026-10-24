@@ -60,13 +60,13 @@ public class MinMaxFinder {
      * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] parts = reader.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(parts[0]);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            String[] p = br.readLine().trim().split("\\s+");
+            int n = Integer.parseInt(p[0]);
 
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(parts[i + 1]);
+                array[i] = Integer.parseInt(p[i + 1]);
             }
 
             MinMax result = findMinMax(array);

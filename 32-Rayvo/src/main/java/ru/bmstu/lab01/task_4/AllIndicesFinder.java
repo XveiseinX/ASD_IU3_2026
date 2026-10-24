@@ -53,31 +53,33 @@ public class AllIndicesFinder {
     /**
      * Точка входа для запуска из командной строки.
      *
-     * <p>Ожидает строку вида: {@code n x a1 a2 ... an}, где {@code n} —
-     * количество элементов, {@code x} — искомое значение. Выводит индексы
-     * через пробел в порядке возрастания. Если вхождений нет — выводит
-     * {@code -1}.
+     * <p>Ожидает строку вида: {@code n a1 a2 ... an x}.
+     * Выводит индексы через пробел в порядке возрастания или {@code -1},
+     * если вхождений нет.
      *
      * @param args аргументы командной строки (не используются)
      */
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
-            String[] parts = reader.readLine().trim().split("\\s+");
-            int n = Integer.parseInt(parts[0]);
-            int x = Integer.parseInt(parts[1]);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+            String[] p = br.readLine().trim().split("\\s+");
+            int n = Integer.parseInt(p[0]);
 
             int[] array = new int[n];
             for (int i = 0; i < n; i++) {
-                array[i] = Integer.parseInt(parts[i + 2]);
+                array[i] = Integer.parseInt(p[i + 1]);
             }
 
+            int x = Integer.parseInt(p[n + 1]);
             int[] indices = findAllIndices(array, x);
+
             if (indices.length == 0) {
                 System.out.println(-1);
             } else {
-                System.out.println(Arrays.toString(indices)
-                        .replaceAll("[\\[\\],]", " ")
-                        .trim());
+                StringBuilder sb = new StringBuilder();
+                for (int idx : indices) {
+                    sb.append(idx).append(' ');
+                }
+                System.out.println(sb.toString().trim());
             }
         } catch (IOException e) {
             e.printStackTrace();
