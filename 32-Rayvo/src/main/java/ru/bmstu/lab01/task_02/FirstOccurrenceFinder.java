@@ -5,18 +5,15 @@ public class FirstOccurrenceFinder {
     /**
      * Возвращает индекс первого элемента массива, равного {@code x}.
      *
-     * <p>Если массив {@code null} или элемент не найден, возвращается
+     * <p>Если элемент не найден, возвращается
      * {@code -1}.
      *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @param x     искомое значение
      * @return индекс первого вхождения {@code x} или {@code -1}, если
-     *         элемент не найден или массив {@code null}
+     *         элемент не найден
      */
     public static int findFirstOccurrence(int[] array, int x) {
-        if (array == null) {
-            return -1;
-        }
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] == x) {

@@ -31,16 +31,6 @@ class OccurrenceCounterTest {
     }
 
     @Test
-    void shouldReturnZeroWhenArrayIsNull() {
-        assertEquals(0, OccurrenceCounter.countOccurrences(null, 5));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsEmpty() {
-        assertEquals(0, OccurrenceCounter.countOccurrences(new int[]{}, 5));
-    }
-
-    @Test
     void shouldHandleSingleElementArrayFound() {
         assertEquals(1, OccurrenceCounter.countOccurrences(new int[]{25}, 25));
     }

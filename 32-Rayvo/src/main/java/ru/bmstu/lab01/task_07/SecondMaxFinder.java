@@ -5,19 +5,10 @@ public class SecondMaxFinder {
     /**
      * Возвращает второй по величине элемент массива.
      *
-     * <p>Массив должен содержать хотя бы два элемента. Если массив
-     * {@code null} или содержит менее двух элементов, выбрасывается
-     * {@link IllegalArgumentException}.
-     *
      * @param array входной массив целых чисел (элементы различны)
      * @return второй по величине элемент
-     * @throws IllegalArgumentException если массив {@code null} или
-     *         содержит менее двух элементов
      */
     public static int findSecondMax(int[] array) {
-        if (array == null || array.length < 2) {
-            throw new IllegalArgumentException("Array must contain at least two elements");
-        }
 
         int max;
         int secondMax;

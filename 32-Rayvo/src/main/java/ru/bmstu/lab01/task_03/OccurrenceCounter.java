@@ -5,16 +5,11 @@ public class OccurrenceCounter {
     /**
      * Возвращает количество элементов массива, равных {@code x}.
      *
-     * <p>Если массив {@code null} или пуст, возвращается {@code 0}.
-     *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @param x     искомое значение
      * @return количество элементов, равных {@code x}
      */
     public static int countOccurrences(int[] array, int x) {
-        if (array == null) {
-            return 0;
-        }
 
         int count = 0;
         for (int value : array) {

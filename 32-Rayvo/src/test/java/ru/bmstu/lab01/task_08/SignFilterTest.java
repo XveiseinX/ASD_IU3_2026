@@ -52,22 +52,6 @@ class SignFilterTest {
     }
 
     @Test
-    void shouldReturnEmptyArraysWhenArrayIsNull() {
-        SignFilter.FilterResult result = SignFilter.filterBySign(null);
-
-        assertArrayEquals(new int[0], result.positive());
-        assertArrayEquals(new int[0], result.negative());
-    }
-
-    @Test
-    void shouldReturnEmptyArraysWhenArrayIsEmpty() {
-        SignFilter.FilterResult result = SignFilter.filterBySign(new int[]{});
-
-        assertArrayEquals(new int[0], result.positive());
-        assertArrayEquals(new int[0], result.negative());
-    }
-
-    @Test
     void shouldHandleSinglePositiveElement() {
         SignFilter.FilterResult result = SignFilter.filterBySign(new int[]{25});
 

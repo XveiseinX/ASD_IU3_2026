@@ -16,16 +16,10 @@ public class SignFilter {
      * Разделяет массив на положительные и отрицательные элементы,
      * сохраняя исходный порядок. Нули отбрасываются.
      *
-     * <p>Если массив {@code null} или пуст, оба результирующих массивов
-     * пусты.
-     *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @return пара массивов {@code (positive, negative)}
      */
     public static FilterResult filterBySign(int[] array) {
-        if (array == null || array.length == 0) {
-            return new FilterResult(new int[0], new int[0]);
-        }
 
         // Первый проход: подсчёт положительных и отрицательных
         int positiveCount = 0;

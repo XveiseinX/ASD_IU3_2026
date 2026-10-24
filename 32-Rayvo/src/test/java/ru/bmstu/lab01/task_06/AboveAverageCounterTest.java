@@ -30,28 +30,10 @@ class AboveAverageCounterTest {
     }
 
     @Test
-    void shouldCountAllWhenAllAboveAverage() {
-        int[] array = {10, 10, 10, 100};
-        // Сумма = 130, среднее = 130 / 4 — не целое!
-        // Этот тест не подходит; заменён ниже
-        assertEquals(-1, -1); // заглушка, не используется
-    }
-
-    @Test
     void shouldReturnZeroWhenArrayHasOneElement() {
         int[] array = {42};
         // Среднее = 42, строго больше нет
         assertEquals(0, AboveAverageCounter.countGreaterThanAverage(array));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsNull() {
-        assertEquals(0, AboveAverageCounter.countGreaterThanAverage(null));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsEmpty() {
-        assertEquals(0, AboveAverageCounter.countGreaterThanAverage(new int[]{}));
     }
 
     @Test

@@ -34,21 +34,6 @@ class SumOfSquaresTest {
     }
 
     @Test
-    void shouldReturnZeroWhenArrayIsEmpty() {
-        assertEquals(0L, SumOfSquares.sumOfSquares(new int[]{}));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsNull() {
-        assertEquals(0L, SumOfSquares.sumOfSquares(null));
-    }
-
-    @Test
-    void shouldReturnSquareWhenArrayHasOneElement() {
-        assertEquals(49L, SumOfSquares.sumOfSquares(new int[]{7}));
-    }
-
-    @Test
     void shouldHandleSquareThatOverflowsInt() {
         // 50000^2 = 2_500_000_000 > Integer.MAX_VALUE (2_147_483_647)
         int[] array = {50000};

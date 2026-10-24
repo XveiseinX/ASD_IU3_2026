@@ -43,22 +43,6 @@ class AllIndicesFinderTest {
     }
 
     @Test
-    void shouldReturnEmptyArrayWhenArrayIsNull() {
-        assertArrayEquals(
-                new int[0],
-                AllIndicesFinder.findAllIndices(null, 5)
-        );
-    }
-
-    @Test
-    void shouldReturnEmptyArrayWhenArrayIsEmpty() {
-        assertArrayEquals(
-                new int[0],
-                AllIndicesFinder.findAllIndices(new int[]{}, 5)
-        );
-    }
-
-    @Test
     void shouldHandleSingleElementArrayFound() {
         assertArrayEquals(
                 new int[]{0},

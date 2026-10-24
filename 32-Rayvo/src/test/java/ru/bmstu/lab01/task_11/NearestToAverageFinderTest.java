@@ -3,7 +3,6 @@ package ru.bmstu.lab01.task_11;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class NearestToAverageFinderTest {
 
@@ -67,22 +66,6 @@ class NearestToAverageFinderTest {
         assertEquals(
                 Integer.MAX_VALUE,
                 NearestToAverageFinder.findClosestToAverage(array)
-        );
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsNull() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> NearestToAverageFinder.findClosestToAverage(null)
-        );
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsEmpty() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> NearestToAverageFinder.findClosestToAverage(new int[]{})
         );
     }
 

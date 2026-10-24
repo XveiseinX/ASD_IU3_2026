@@ -39,16 +39,6 @@ class LastMultipleFinderTest {
     }
 
     @Test
-    void shouldReturnMinusOneWhenArrayIsNull() {
-        assertEquals(-1, LastMultipleFinder.findLastMultiple(null, 3));
-    }
-
-    @Test
-    void shouldReturnMinusOneWhenArrayIsEmpty() {
-        assertEquals(-1, LastMultipleFinder.findLastMultiple(new int[]{}, 3));
-    }
-
-    @Test
     void shouldHandleSingleElementArrayFound() {
         assertEquals(0, LastMultipleFinder.findLastMultiple(new int[]{25}, 5));
     }

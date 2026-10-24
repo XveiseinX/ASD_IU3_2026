@@ -38,16 +38,6 @@ class FirstOccurrenceFinderTest {
     }
 
     @Test
-    void shouldReturnMinusOneWhenArrayIsNull() {
-        assertEquals(-1, FirstOccurrenceFinder.findFirstOccurrence(null, 5));
-    }
-
-    @Test
-    void shouldReturnMinusOneWhenArrayIsEmpty() {
-        assertEquals(-1, FirstOccurrenceFinder.findFirstOccurrence(new int[]{}, 5));
-    }
-
-    @Test
     void shouldHandleSingleElementArrayFound() {
         assertEquals(0, FirstOccurrenceFinder.findFirstOccurrence(new int[]{25}, 25));
     }

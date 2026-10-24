@@ -6,17 +6,13 @@ public class AboveAverageCounter {
      * Возвращает количество элементов, строго больших среднего
      * арифметического.
      *
-     * <p>Если массив {@code null} или пуст, возвращается {@code 0}.
      * Сумма накапливается в {@code long}, чтобы избежать переполнения
      * {@code int} при больших значениях элементов.
      *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @return количество элементов, строго больших среднего
      */
     public static int countGreaterThanAverage(int[] array) {
-        if (array == null || array.length == 0) {
-            return 0;
-        }
 
         // Первый проход: сумма всех элементов
         long sum = 0L;

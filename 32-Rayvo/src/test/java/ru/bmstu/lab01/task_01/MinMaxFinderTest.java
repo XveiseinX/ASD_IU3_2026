@@ -3,7 +3,6 @@ package ru.bmstu.lab01.task_01;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MinMaxFinderTest {
 
@@ -68,22 +67,6 @@ class MinMaxFinderTest {
 
         assertEquals(-9, result.min());
         assertEquals(12, result.max());
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsNull() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> MinMaxFinder.findMinMax(null)
-        );
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsEmpty() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> MinMaxFinder.findMinMax(new int[]{})
-        );
     }
 
     @Test

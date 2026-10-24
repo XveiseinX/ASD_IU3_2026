@@ -31,16 +31,6 @@ class SortedCheckerTest {
     }
 
     @Test
-    void shouldReturnTrueForEmptyArray() {
-        assertTrue(SortedChecker.isNonDecreasing(new int[]{}));
-    }
-
-    @Test
-    void shouldReturnTrueForNullArray() {
-        assertTrue(SortedChecker.isNonDecreasing(null));
-    }
-
-    @Test
     void shouldReturnFalseForStrictlyDecreasingArray() {
         int[] array = {9, 7, 5, 3, 1};
         assertFalse(SortedChecker.isNonDecreasing(array));

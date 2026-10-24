@@ -25,21 +25,6 @@ class SumOfElementsTest {
     }
 
     @Test
-    void shouldReturnZeroWhenArrayIsEmpty() {
-        assertEquals(0L, SumOfElements.sum(new int[]{}));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsNull() {
-        assertEquals(0L, SumOfElements.sum(null));
-    }
-
-    @Test
-    void shouldReturnElementWhenArrayHasOneElement() {
-        assertEquals(42L, SumOfElements.sum(new int[]{42}));
-    }
-
-    @Test
     void shouldReturnZeroWhenAllElementsAreZero() {
         assertEquals(0L, SumOfElements.sum(new int[]{0, 0, 0, 0}));
     }

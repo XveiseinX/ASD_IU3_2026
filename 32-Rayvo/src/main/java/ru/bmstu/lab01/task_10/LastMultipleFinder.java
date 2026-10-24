@@ -7,10 +7,10 @@ public class LastMultipleFinder {
      *
      * <p>Проход идёт справа налево, поэтому находится именно последний
      * элемент, а при первом совпадении работа прекращается досрочно.
-     * Если массив {@code null}, пуст или не содержит кратных {@code k},
+     * Если массив не содержит кратных {@code k},
      * возвращается {@code -1}.
      *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @param k     делитель; не должен быть нулём
      * @return индекс последнего элемента, кратного {@code k}, или {@code -1}
      * @throws IllegalArgumentException если {@code k == 0}
@@ -18,9 +18,6 @@ public class LastMultipleFinder {
     public static int findLastMultiple(int[] array, int k) {
         if (k == 0) {
             throw new IllegalArgumentException("k must not be zero");
-        }
-        if (array == null) {
-            return -1;
         }
 
         for (int i = array.length - 1; i >= 0; i--) {

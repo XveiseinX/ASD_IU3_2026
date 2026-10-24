@@ -6,16 +6,12 @@ public class SumOfElements {
      * Возвращает сумму всех элементов массива.
      *
      * <p>Сумма накапливается в {@code long}, чтобы избежать переполнения
-     * {@code int} при больших значениях элементов. Если массив
-     * {@code null} или пуст, возвращается {@code 0}.
+     * {@code int} при больших значениях элементов.
      *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @return сумма всех элементов
      */
     public static long sum(int[] array) {
-        if (array == null) {
-            return 0L;
-        }
 
         long sum = 0L;
         for (int value : array) {

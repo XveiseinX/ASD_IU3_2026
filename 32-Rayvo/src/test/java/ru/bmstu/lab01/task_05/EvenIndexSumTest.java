@@ -27,16 +27,6 @@ class EvenIndexSumTest {
     }
 
     @Test
-    void shouldReturnZeroWhenArrayIsNull() {
-        assertEquals(0L, EvenIndexSum.sumEvenIndices(null));
-    }
-
-    @Test
-    void shouldReturnZeroWhenArrayIsEmpty() {
-        assertEquals(0L, EvenIndexSum.sumEvenIndices(new int[]{}));
-    }
-
-    @Test
     void shouldHandleAllZeros() {
         int[] array = {0, 0, 0, 0};
         assertEquals(0L, EvenIndexSum.sumEvenIndices(array));

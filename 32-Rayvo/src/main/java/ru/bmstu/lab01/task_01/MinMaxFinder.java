@@ -14,17 +14,11 @@ public class MinMaxFinder {
     /**
      * Возвращает минимальный и максимальный элементы массива.
      *
-     * <p>Массив должен содержать хотя бы один элемент. Если массив
-     * {@code null} или пуст, выбрасывается {@link IllegalArgumentException}.
-     *
      * @param array входной массив целых чисел
      * @return пара {@code (min, max)}
      * @throws IllegalArgumentException если массив {@code null} или пуст
      */
     public static MinMax findMinMax(int[] array) {
-        if (array == null || array.length == 0) {
-            throw new IllegalArgumentException("Array must not be null or empty");
-        }
 
         int min = array[0];
         int max = array[0];

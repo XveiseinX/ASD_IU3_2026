@@ -5,16 +5,10 @@ public class SortedChecker {
     /**
      * Проверяет, является ли массив неубывающим.
      *
-     * <p>Массив {@code null}, пустой массив и массив из одного элемента
-     * считаются неубывающими (тривиальный случай).
-     *
-     * @param array входной массив целых чисел (может быть {@code null})
+     * @param array входной массив целых чисел
      * @return {@code true}, если массив неубывающий, иначе {@code false}
      */
     public static boolean isNonDecreasing(int[] array) {
-        if (array == null || array.length < 2) {
-            return true;
-        }
 
         for (int i = 1; i < array.length; i++) {
             if (array[i - 1] > array[i]) {

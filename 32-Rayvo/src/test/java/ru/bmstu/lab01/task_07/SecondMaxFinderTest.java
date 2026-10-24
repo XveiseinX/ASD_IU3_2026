@@ -3,7 +3,6 @@ package ru.bmstu.lab01.task_07;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SecondMaxFinderTest {
 
@@ -71,30 +70,6 @@ class SecondMaxFinderTest {
     void shouldFindSecondMaxWithIntegerMinValue() {
         int[] array = {Integer.MIN_VALUE, 5};
         assertEquals(Integer.MIN_VALUE, SecondMaxFinder.findSecondMax(array));
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsNull() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> SecondMaxFinder.findSecondMax(null)
-        );
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayIsEmpty() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> SecondMaxFinder.findSecondMax(new int[]{})
-        );
-    }
-
-    @Test
-    void shouldThrowExceptionWhenArrayHasOneElement() {
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> SecondMaxFinder.findSecondMax(new int[]{25})
-        );
     }
 
     @Test
